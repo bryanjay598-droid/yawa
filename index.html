@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-WALLET</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+    <header class="header">
+      <h2>◈ E-WALLET</h2>
+      <span class="demo-badge">WALLET</span>
+    </header>
+
+    <main>
+      <section class="balance-card">
+        <p>Available Balance</p>
+        <h1 id="balance">₱2,500.00</h1>
+        <p class="balance-note">Your digital wallet</p>
+      </section>
+
+      <section class="actions">
+        <button class="action-btn add-btn" id="showAdd">
+          <span>＋</span>
+          Add Money
+        </button>
+        <button class="action-btn send-btn" id="showSend">
+          <span>➤</span>
+          Send Money
+        </button>
+      </section>
+
+      <section class="panel" id="addPanel" hidden>
+        <h2>Add Money</h2>
+        <form id="addForm">
+          <label for="addAmount">Amount (₱)</label>
+          <input id="addAmount" type="number"
+            min="1" step="0.01" placeholder="Enter amount" required>
+
+          <label for="addSource">Cash-in method</label>
+          <select id="addSource" required>
+            <option value="Cash-in kiosk">Cash-in kiosk</option>
+            <option value="Bank transfer">Bank transfer</option>
+            <option value="GCash">GCash</option>
+          </select>
+
+          <button class="primary-btn" type="submit">Add to Wallet</button>
+        </form>
+      </section>
+
+      <section class="panel" id="sendPanel" hidden>
+        <h2>Send Money</h2>
+        <form id="sendForm">
+          <label for="recipient">Recipient Name</label>
+          <input id="recipient" type="text"
+            placeholder="Enter recipient name" required>
+
+          <label for="walletId">Wallet ID</label>
+          <input id="walletId" type="text"
+            placeholder="Enter wallet ID" required>
+
+          <label for="sendAmount">Amount (₱)</label>
+          <input id="sendAmount" type="number"
+            min="1" step="0.01" placeholder="Enter amount" required>
+
+          <label for="note">Note (optional)</label>
+          <input id="note" type="text" placeholder="What's it for?">
+
+          <button class="primary-btn" type="submit">Send Money</button>
+        </form>
+      </section>
+
+      <section class="history">
+        <div class="history-heading">
+          <h2>Recent Transactions</h2>
+          <button id="clearHistory" class="clear-btn">Clear</button>
+        </div>
+        <div id="transactionList">
+          <p class="empty">No transactions yet.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p> E-WALLET</p>
+      <p class="disclaimer">
+         No real money or actual transfers.
+      </p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

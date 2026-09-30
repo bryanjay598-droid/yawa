@@ -1,0 +1,286 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f5fa;
+  color: #172033;
+  min-height: 100vh;
+}
+
+.app {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #fff;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.06);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 24px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.header h2 {
+  color: #155eef;
+  font-size: 21px;
+  letter-spacing: 0.5px;
+}
+
+.demo-badge {
+  background: #eaf1ff;
+  color: #155eef;
+  padding: 7px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+main {
+  padding: 24px;
+}
+
+.balance-card {
+  background: linear-gradient(135deg, #155eef, #6638d8);
+  color: white;
+  padding: 27px 24px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(21, 94, 239, 0.2);
+}
+
+.balance-card p {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.balance-card h1 {
+  font-size: 35px;
+  margin: 14px 0;
+  overflow-wrap: anywhere;
+}
+
+.balance-card .balance-note {
+  font-size: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  margin: 22px 0;
+}
+
+.action-btn {
+  flex: 1;
+  border: none;
+  border-radius: 13px;
+  padding: 16px 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.action-btn span {
+  display: block;
+  font-size: 23px;
+  margin-bottom: 7px;
+}
+
+.add-btn {
+  background: #eaf1ff;
+  color: #155eef;
+}
+
+.send-btn {
+  background: #e9f9f0;
+  color: #16834b;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.98);
+}
+
+.panel {
+  border: 1px solid #e8ecf3;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 24px;
+  background: #fff;
+}
+
+.panel h2,
+.history h2 {
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #dce2ec;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+}
+
+input:focus,
+select:focus {
+  border-color: #155eef;
+  box-shadow: 0 0 0 3px rgba(21, 94, 239, 0.1);
+}
+
+.primary-btn {
+  border: none;
+  background: #155eef;
+  color: white;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.primary-btn:hover {
+  background: #104bc5;
+}
+
+.history {
+  margin-top: 28px;
+}
+
+.history-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clear-btn {
+  background: none;
+  border: none;
+  color: #155eef;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.transaction {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 0;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.transaction-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.transaction-icon.in {
+  background: #e9f9f0;
+  color: #16834b;
+}
+
+.transaction-icon.out {
+  background: #fff0ef;
+  color: #d64545;
+}
+
+.transaction-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.transaction-info strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+.transaction-info small {
+  color: #8a94a6;
+  font-size: 11px;
+}
+
+.transaction-amount {
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.transaction-amount.in {
+  color: #16834b;
+}
+
+.transaction-amount.out {
+  color: #d64545;
+}
+
+.empty {
+  color: #929bad;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #8a94a6;
+  font-size: 12px;
+  border-top: 1px solid #edf0f5;
+}
+
+.disclaimer {
+  margin-top: 7px;
+  font-size: 11px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 400px) {
+  main {
+    padding: 18px;
+  }
+
+  .balance-card h1 {
+    font-size: 29px;
+  }
+
+  .header {
+    padding: 18px;
+  }
+}
